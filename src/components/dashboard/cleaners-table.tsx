@@ -18,7 +18,7 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Cleaner } from '@/lib/types';
 import { cn } from '@/lib/utils';
-import { Star, Phone, Mail, MapPin, Briefcase, Calendar, Eye, Power } from 'lucide-react';
+import { Phone, Mail, MapPin, Briefcase, Calendar, Eye, Power } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface CleanersTableProps {
@@ -64,8 +64,8 @@ export function CleanersTable({
         await onEnableStateChange?.(cleaner.id, action === 'enable');
         toast.success(`Cleaner ${action === 'enable' ? 'enabled' : 'disabled'} successfully`);
       }
-    } catch (error) {
-      toast.error('Failed to update cleaner status');
+    } catch {
+      toast.error('Failed to update cleaner status',);
     }
   };
 
@@ -224,12 +224,12 @@ export function CleanersTable({
                   </div>
                 )}
 
-                {selectedCleaner.rating && (
+                {/* {selectedCleaner.rating && (
                   <div className="flex items-center space-x-2 text-sm">
                     <Star className="h-4 w-4 text-yellow-400" />
                     <span>{selectedCleaner.rating} / 5.0</span>
                   </div>
-                )}
+                )} */}
 
                 {selectedCleaner.totalJobs && (
                   <div className="flex items-center space-x-2 text-sm">

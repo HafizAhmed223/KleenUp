@@ -7,7 +7,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Chrome as Broom, User, Settings, LogOut } from 'lucide-react';
+import { Chrome as Broom, Settings, LogOut } from 'lucide-react';
+// import { Chrome as Broom, User, Settings, LogOut } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
